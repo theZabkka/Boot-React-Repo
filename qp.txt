@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="help-title">Question Text</div>
+    <div class="help-wrap">
+        <div class="help-container">
+            <ul class="help-variants-list">
+                <li class="variant-item">Variant 1</li>
+                <li class="variant-item">Variant 2asd</li>
+                <li class="variant-item">Variant 3asdasd</li>
+                <li class="variant-item">Variant 4</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
+@keyframes title-animation {
+    from {margin-top: 12px; opacity: 0;}
+    to {margin-top: 32px; opacity: 1}
+}
+@keyframes variants-animation-1 {
+    0% {opacity: 0;}
+    100% {margin-top: 8px; opacity: 1;}
+}
+@keyframes variants-animation-2 {
+    0% {margin-top: 20px; opacity: 0;}
+    50% {margin-top: 8px; opacity: 1;}
+    100% {margin-top: 8px; opacity: 1;}
+}
+
+body {
+    margin: 0;
+
+    font-family: "Outfit", sans-serif;
+}
+
+.help-title {
+    position: absolute;
+    
+    width: 100vw;
+    text-align: center;
+
+    color: #588376;
+
+    margin-top: 32px;
+
+    font-size: 6vh;
+
+    animation-name: title-animation;
+    animation-duration: 1s;
+	animation-timing-function: cubic-bezier();
+}
+
+.help-wrap {
+    display: flex;
+    justify-content: center;
+
+    height: 100vh;
+}
+
+.help-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 100vh;
+}
+
+.help-variants-list {
+    padding: 0;
+}
+
+.variant-item {
+    animation-name: variants-animation-1;
+    animation-duration: 1.2s;
+	animation-timing-function: cubic-bezier();
+
+    margin-top: 8px;
+
+    font-size: 4vh;
+    font-weight: 500;
+}
